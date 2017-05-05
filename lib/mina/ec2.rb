@@ -88,7 +88,7 @@ namespace :ec2 do
   end
 
   task :setup do
-    to :before_hook do
+    on :before_hook do
       invoke :'ec2:get_domains'
     end
 
@@ -102,7 +102,7 @@ namespace :ec2 do
   end
 
   task :deploy do
-    to :before_hook do
+    on :before_hook do
       invoke :'ec2:get_domains'
     end
 
